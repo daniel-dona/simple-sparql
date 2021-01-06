@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  simple-sparql:
+    build: ./main/
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./data:/data
